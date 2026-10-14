@@ -1,0 +1,666 @@
+
+/* ==========================
+   1. GLOBAL STYLES
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #142c4e;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blue {
+    color: #1680ff;
+}
+
+.section {
+    padding: 75px 6%;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #1680ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+}
+
+/* ==========================
+   2. NAVIGATION
+========================== */
+
+.navbar {
+    min-height: 76px;
+    background: #0e2341;
+    color: white;
+    padding: 14px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.logo small {
+    display: block;
+    color: #b9c9df;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.logo-icon {
+    background: #1680ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e3ebf6;
+    transition: color 0.25s;
+}
+
+.navbar nav a:hover,
+.navbar nav .active {
+    color: #1680ff;
+}
+
+.nav-button {
+    background: #087cff;
+    padding: 11px 22px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.25s;
+}
+
+.nav-button:hover {
+    background: #0062d6;
+}
+
+/* ==========================
+   3. HERO SECTION
+========================== */
+
+.hero {
+    background: linear-gradient(115deg, #f5faff, #e9f4ff);
+    min-height: 420px;
+    padding: 65px 7%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 590px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 3.5vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p {
+    color: #5b7190;
+    font-size: 15px;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.25s, background 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #087cff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0066dc;
+}
+
+.btn-outline {
+    color: #087cff;
+    background: white;
+    border: 1px solid #1680ff;
+}
+
+/* ==========================
+   4. HERO ILLUSTRATION
+========================== */
+
+.hero-visual {
+    position: relative;
+    min-height: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-circle {
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    background: #d8eaff;
+    border-radius: 48% 52% 45% 55%;
+    transform: rotate(-8deg);
+}
+
+.code-window {
+    position: relative;
+    z-index: 1;
+    width: 82%;
+    max-width: 410px;
+    background: #122744;
+    border: 5px solid #a5c8f4;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(25, 66, 120, 0.2);
+    overflow: hidden;
+}
+
+.window-top {
+    min-height: 38px;
+    background: #203b5d;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 5px;
+}
+
+.window-top > span {
+    width: 8px;
+    height: 8px;
+    background: #ff7166;
+    border-radius: 50%;
+}
+
+.window-top > span:nth-child(2) {
+    background: #ffcb56;
+}
+
+.window-top > span:nth-child(3) {
+    background: #48d69a;
+}
+
+.window-top p {
+    font-size: 10px;
+    color: #c8d9ef;
+    margin-left: 10px;
+}
+
+.code-content {
+    padding: 18px 16px 12px;
+    font-family: Consolas, monospace;
+    font-size: 12px;
+    color: #d9e8ff;
+    line-height: 2;
+}
+
+.code-content p span {
+    color: #7890ad;
+    margin-right: 12px;
+}
+
+.code-blue {
+    color: #7eb5ff;
+}
+
+.code-green {
+    color: #5be0ad;
+}
+
+.code-orange {
+    color: #ffc37b;
+}
+
+.commit-status {
+    padding: 10px 15px;
+    background: #1b3454;
+    color: #b8cce4;
+    font-size: 11px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #48d69a;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 2;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(25, 66, 120, 0.13);
+}
+
+.floating-card strong,
+.floating-card small {
+    display: block;
+}
+
+.floating-card strong {
+    font-size: 15px;
+}
+
+.floating-card small {
+    color: #71829b;
+    font-size: 10px;
+}
+
+.git-card {
+    left: 0;
+    top: 25px;
+    border-left: 4px solid #f05245;
+}
+
+.github-card {
+    right: 0;
+    bottom: 18px;
+    border-left: 4px solid #1680ff;
+}
+
+/* ==========================
+   5. SECTION HEADINGS
+========================== */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 38px;
+}
+
+.section-heading h2 {
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #6a7e98;
+    font-size: 14px;
+}
+
+/* ==========================
+   6. FEATURE CARDS
+========================== */
+
+.about {
+    background: #ffffff;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    border: 1px solid #e0eafa;
+    border-radius: 12px;
+    padding: 25px 22px;
+    box-shadow: 0 4px 15px rgba(30, 73, 125, 0.04);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(30, 73, 125, 0.1);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.blue-bg {
+    background: #1680ff;
+}
+
+.green-bg {
+    background: #16a56b;
+}
+
+.purple-bg {
+    background: #7954e8;
+}
+
+.orange-bg {
+    background: #ff9c24;
+}
+
+.feature-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 13px;
+    color: #647994;
+    margin-bottom: 20px;
+}
+
+.feature-card > a {
+    color: #087cff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ==========================
+   7. GIT WORKFLOW
+========================== */
+
+.steps-section {
+    background: #f0f7ff;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.step {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.step-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.step-blue {
+    color: #087cff;
+    background: #dbeaff;
+}
+
+.step-green {
+    color: #119c66;
+    background: #d9f6e9;
+}
+
+.step-purple {
+    color: #7954e8;
+    background: #e9e0ff;
+}
+
+.step-orange {
+    color: #e8870c;
+    background: #fff0d8;
+}
+
+.step h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #637a98;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.step code {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    margin: 5px auto;
+    padding: 5px 8px;
+    background: white;
+    color: #22578f;
+    border: 1px solid #dbe8f7;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+/* ==========================
+   8. CALL TO ACTION
+========================== */
+
+.cta {
+    background: linear-gradient(110deg, #174a83, #0e2b50);
+    color: white;
+    padding: 35px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.cta p {
+    color: #d0dfef;
+    font-size: 13px;
+}
+
+.btn-light {
+    color: #17385f;
+    background: white;
+    white-space: nowrap;
+}
+
+.btn-light:hover {
+    background: #eaf3ff;
+}
+
+/* ==========================
+   9. FOOTER
+========================== */
+
+.footer {
+    background: #0b1d34;
+    color: white;
+    padding: 28px 6% 15px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding-bottom: 22px;
+}
+
+.footer-logo {
+    font-size: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-links a {
+    color: #c6d3e3;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #1680ff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #263952;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #aebdd0;
+    font-size: 11px;
+}
+
+/* ==========================
+   10. RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero {
+        gap: 25px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        padding: 8px 0;
+    }
+
+    .navbar nav a {
+        white-space: nowrap;
+    }
+
+    .nav-button {
+        padding: 9px 13px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-visual {
+        min-height: 270px;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+
+    .feature-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 23px;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}

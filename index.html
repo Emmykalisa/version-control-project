@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VersionControl | Learn Git and GitHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">⑂</span>
+            <span>
+                Version<span class="blue">Control</span>
+                <small>Track · Collaborate · Build</small>
+            </span>
+        </a>
+
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#steps">Getting Started</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#steps" class="nav-button">Get Started</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">VERSION CONTROL</span>
+
+            <h1>
+                Track Your Changes,<br>
+                <span class="blue">Build Better Together</span>
+            </h1>
+
+            <p>
+                Version control helps you manage your code, return to
+                previous versions, and collaborate with your team.
+                With Git and GitHub, your work stays organized,
+                protected, and accessible.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#steps" class="btn btn-primary">
+                    Get Started
+                </a>
+
+                <a href="#about" class="btn btn-outline">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-circle"></div>
+
+            <div class="code-window">
+                <div class="window-top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>my-project / index.html</p>
+                </div>
+
+                <div class="code-content">
+                    <p><span>01</span> &lt;html&gt;</p>
+                    <p><span>02</span> &nbsp;&lt;head&gt;</p>
+                    <p class="code-blue">
+                        <span>03</span> &nbsp;&nbsp;&lt;title&gt;
+                        My Project
+                    </p>
+                    <p><span>04</span> &nbsp;&lt;/head&gt;</p>
+                    <p class="code-green">
+                        <span>05</span> &nbsp;&lt;body&gt;
+                    </p>
+                    <p class="code-orange">
+                        <span>06</span> &nbsp;&nbsp;Hello World!
+                    </p>
+                    <p><span>07</span> &nbsp;&lt;/body&gt;</p>
+                    <p><span>08</span> &lt;/html&gt;</p>
+                </div>
+
+                <div class="commit-status">
+                    <span class="status-dot"></span>
+                    All changes tracked
+                </div>
+            </div>
+
+            <div class="floating-card git-card">
+                <strong>Git</strong>
+                <small>Track changes</small>
+            </div>
+
+            <div class="floating-card github-card">
+                <strong>GitHub</strong>
+                <small>Share your code</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="section-heading">
+            <span class="eyebrow">WHY VERSION CONTROL?</span>
+            <h2>Build Projects with Confidence</h2>
+            <p>
+                Keep your code organized, understand every change,
+                and work more effectively.
+            </p>
+        </div>
+
+        <div class="feature-grid" id="features">
+
+            <article class="feature-card">
+                <div class="feature-icon blue-bg">&lt;/&gt;</div>
+                <h3>Track Changes</h3>
+                <p>
+                    See what changed, when it changed, and who
+                    made the changes to your project.
+                </p>
+                <a href="#steps">Learn more →</a>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon green-bg">✓</div>
+                <h3>Protect Your Work</h3>
+                <p>
+                    Save versions of your code and recover
+                    previous work when needed.
+                </p>
+                <a href="#steps">Learn more →</a>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon purple-bg">♧</div>
+                <h3>Collaborate Easily</h3>
+                <p>
+                    Use branches and pull requests to develop
+                    features and review code with others.
+                </p>
+                <a href="#steps">Learn more →</a>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon orange-bg">☁</div>
+                <h3>Access Anywhere</h3>
+                <p>
+                    Push your repository to GitHub to back up
+                    and access your code online.
+                </p>
+                <a href="#steps">Learn more →</a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Git Workflow -->
+    <section class="steps-section section" id="steps">
+        <div class="section-heading">
+            <span class="eyebrow">HOW IT WORKS</span>
+            <h2>Get Started in 4 Simple Steps</h2>
+            <p>Follow this workflow to manage your first project.</p>
+        </div>
+
+        <div class="steps-grid">
+
+            <article class="step">
+                <div class="step-icon step-blue">01</div>
+                <h3>Create Your Project</h3>
+                <p>
+                    Create a new project or open an existing
+                    project on your computer.
+                </p>
+                <code>mkdir my-project</code>
+            </article>
+
+            <article class="step">
+                <div class="step-icon step-green">02</div>
+                <h3>Initialize Git</h3>
+                <p>
+                    Create a local repository and start tracking
+                    changes to your files.
+                </p>
+                <code>git init</code>
+            </article>
+
+            <article class="step">
+                <div class="step-icon step-purple">03</div>
+                <h3>Commit Your Changes</h3>
+                <p>
+                    Stage your files and save a version with
+                    a meaningful commit message.
+                </p>
+                <code>git add .</code>
+                <code>git commit -m "First version"</code>
+            </article>
+
+            <article class="step">
+                <div class="step-icon step-orange">04</div>
+                <h3>Push to GitHub</h3>
+                <p>
+                    Connect your local repository to GitHub
+                    and upload your saved versions.
+                </p>
+                <code>git push</code>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta" id="contact">
+        <div>
+            <h2>Ready to Take Control of Your Code?</h2>
+            <p>
+                Start using Git and GitHub today and build
+                better projects with confidence.
+            </p>
+        </div>
+
+        <a href="https://github.com/" target="_blank"
+           rel="noopener noreferrer" class="btn btn-light">
+            Explore GitHub →
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#home" class="logo footer-logo">
+                <span>
+                    Version<span class="blue">Control</span>
+                    <small>Track · Collaborate · Build</small>
+                </span>
+            </a>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#steps">Getting Started</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 VersionControl. All rights reserved.</p>
+            <p>Better Code · Better Teams · Better Future</p>
+        </div>
+    </footer>
+
+</body>
+</html>
